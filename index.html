@@ -1792,6 +1792,27 @@
             .stats-bar { gap: 1rem; }
             .stat-item:not(:last-child)::after { display: none; }
         }
+        @keyframes pulse-animation {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); transform: scale(1); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); transform: scale(1.05); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); transform: scale(1); }
+        }
+        .btn-pulse {
+            animation: pulse-animation 2s infinite;
+            border-color: var(--color-brand-gold);
+            color: var(--color-bg);
+            background-color: var(--color-brand-gold);
+            font-size: 1.1rem;
+            padding: 1rem 2.5rem;
+            margin: 3rem auto 0 auto;
+            display: inline-flex;
+            text-align: center;
+        }
+        .btn-pulse:hover {
+            animation: none;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -2573,7 +2594,7 @@
                     <li class="package-feature"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg> +1 Hediye Görsel Bizden</li>
                 </ul>
 
-                <a href="#contact" class="btn btn-secondary">Tanışma Paketi Seç</a>
+                <a href="https://wa.me/905421916643" target="_blank" class="btn btn-secondary">Tanışma Paketi Seç</a>
             </div>
 
             <!-- Paket 2 (Popular) -->
@@ -2597,7 +2618,7 @@
                     <li class="package-feature"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg> +2 Hediye Görsel Bizden</li>
                 </ul>
 
-                <a href="#contact" class="btn btn-primary">Editorial Paket Seç</a>
+                <a href="https://wa.me/905421916643" target="_blank" class="btn btn-primary">Editorial Paket Seç</a>
             </div>
 
             <!-- Paket 3 -->
@@ -2620,8 +2641,11 @@
                     <li class="package-feature"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg> +3 Hediye Görsel Bizden</li>
                 </ul>
 
-                <a href="#contact" class="btn btn-secondary">Avant-Garde Paket Seç</a>
+                <a href="https://wa.me/905421916643" target="_blank" class="btn btn-secondary">Avant-Garde Paket Seç</a>
             </div>
+        </div>
+        <div style="text-align: center; width: 100%; display: flex; justify-content: center;">
+            <a href="https://wa.me/905421916643" target="_blank" class="btn btn-pulse">Proje Talebi Oluştur</a>
         </div>
     </section>
 
